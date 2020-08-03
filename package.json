@@ -1,0 +1,28 @@
+{
+  "name": "projektron-bcs-ui",
+  "version": "0.0.1",
+  "repository": "git@github.com:TatjanaRo/projektron-bcs-ui.git",
+  "author": "Tatjana Roth <tatjana.roth@denkwerk.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "gulp default"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "postcss-custom-properties": "^9.1.1",
+    "postcss-flexbugs-fixes": "^4.2.1",
+    "postcss-nested": "^4.2.3",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-scss": "^2.1.1",
+    "prettier": "^2.0.5"
+  },
+  "prettier": {
+    "tabWidth": 4
+  },
+  "dependencies": {
+    "gulp-concat-css": "^3.1.0"
+  }
+}

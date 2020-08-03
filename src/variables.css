@@ -1,0 +1,8 @@
+:root {
+    --some-color: red;
+    --brandPrimary: rgb(0, 165, 181);
+    --brandSecondary: rgb(251, 52, 72);
+    --brandTertiary: rgb(251, 52, 72);
+    --brandQuaternary: rgb(254, 221, 60);
+    --brandText: #333333;
+}
