@@ -48,10 +48,12 @@ function svg(cb) {
 }
 
 function serveTask(cb) {
-    return serve({
-        root: ["build"],
-        port: 3030,
-    });
+    return new Promise(
+        serve({
+            root: ["docs"],
+            port: 3030,
+        })
+    );
 }
 
 module.exports = {

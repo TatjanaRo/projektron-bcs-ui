@@ -1,0 +1,62 @@
+[alt="Gruppe"],
+[alt="Projektgruppe"],
+[alt="Projekt"],
+[alt="Unterprojekt"],
+[alt="Arbeitspaket"],
+[alt="Aufgabe"] {
+    /*display: none*/
+    opacity: 0;
+    display: none;
+}
+
+[alt="Gruppe"] + span,
+[alt="Projektgruppe"] + span,
+[alt="Projekt"] + span,
+[alt="Unterprojekt"] + span,
+[alt="Arbeitspaket"] + span,
+[alt="Aufgabe"] + span {
+    position: relative;
+    display: inline-flex;
+}
+
+[alt="Gruppe"] + span:before,
+[alt="Projektgruppe"] + span:before,
+[alt="Projekt"] + span:before,
+[alt="Unterprojekt"] + span:before,
+[alt="Arbeitspaket"] + span:before,
+[alt="Aufgabe"] + span:before {
+    content: "";
+    height: 16px;
+    width: 16px;
+    background: none;
+    background-image: url("images/folder-24px.svg");
+    margin-right: 4px;
+}
+
+a {
+    color: rgb(0, 165, 181);
+}
+
+a:hover {
+    color: rgb(251, 52, 72);
+}
+
+a:hover span:hover {
+    text-decoration: none;
+}
+
+table.list td img,
+table.list td img.objecticon {
+    vertical-align: initial !important;
+}
+
+#JProject.structgroup ~ span:before {
+    content: "";
+    height: 16px;
+    width: 16px;
+    background: red;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}

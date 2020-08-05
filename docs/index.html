@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html class="main">
+    <head> </head>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            min-height: 100vh;
+            text-align: center;
+            font-family: "Helvetica Neue", "Arial", sans-serif;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo {
+        }
+
+        a,
+        a:visited {
+            color: inherit;
+            transition: all 150ms linear;
+        }
+
+        a:hover {
+            color: cyan;
+            text-decoration: none;
+            transition: all 150ms linear;
+        }
+
+        .char {
+            display: block;
+            padding: 12px;
+        }
+
+        .emoji {
+            font-size: 2em;
+        }
+
+        .content {
+            width: 50%;
+            padding: 24px 12px;
+            min-width: 300px;
+            margin: 0 auto;
+        }
+
+        .code {
+            border: 1px solid lightgray;
+            background: #e8e8e8;
+            padding: 4px;
+            border-radius: 4px;
+        }
+    </style>
+    <body>
+        <div class="content">
+            <img
+                src="images/stylus.png"
+                alt="Stylus Extension Logo"
+                class="logo"
+            />
+            <br />
+            <a href="https://github.com/openstyles/stylus">Stylus</a>
+            <span class="char">+</span>
+            <code class="code">
+                @import
+                url("https://tatjanaro.github.io/projektron-bcs-ui/bcs.css");
+            </code>
+            <span class="char">=</span>
+            <span class="emoji">❤️</span>
+        </div>
+    </body>
+</html>
