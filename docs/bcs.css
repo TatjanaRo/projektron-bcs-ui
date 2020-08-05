@@ -21,7 +21,7 @@ body.login {
 }
 
 div.login div.login_product {
-  background-image: url("/images/dw-logo.svg");
+  background-image: url("images/dw-logo.svg");
   width: 80px;
   height: 38px;
 }
