@@ -5,13 +5,19 @@
   "author": "Tatjana Roth <tatjana.roth@denkwerk.com>",
   "license": "MIT",
   "scripts": {
-    "build": "gulp default"
+    "build": "gulp build",
+    "watch": "gulp default",
+    "serve": "gulp serve"
   },
   "devDependencies": {
+    "del": "^5.1.0",
     "gulp": "^4.0.2",
     "gulp-cli": "^2.3.0",
+    "gulp-concat-css": "^3.1.0",
     "gulp-postcss": "^8.0.0",
+    "gulp-serve": "^1.4.0",
     "gulp-sourcemaps": "^2.6.5",
+    "gulp-svgo": "^2.2.1",
     "postcss-custom-properties": "^9.1.1",
     "postcss-flexbugs-fixes": "^4.2.1",
     "postcss-nested": "^4.2.3",
@@ -21,8 +27,5 @@
   },
   "prettier": {
     "tabWidth": 4
-  },
-  "dependencies": {
-    "gulp-concat-css": "^3.1.0"
   }
 }

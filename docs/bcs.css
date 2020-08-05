@@ -1,0 +1,58 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", "Arial", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #333333;
+}
+/* Login Styles */
+
+body.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* LOGIN PAGE */
+
+.instanceName {
+  font-family: "GT Haptik Bold";
+}
+
+div.login div.login_product {
+  background-image: url("/images/dw-logo.svg");
+  width: 80px;
+  height: 38px;
+}
+
+.customlogo {
+  height: 0 !important;
+}
+
+.company,
+.product,
+.instanceName {
+  display: none;
+}
+
+div.login div.login_box {
+  background: white;
+  border-radius: 6px;
+}
+
+div.login input.textfield {
+  border-radius: 3px;
+}
+
+div.login input.button {
+  background-image: none !important;
+  background-color: rgb(0, 165, 181) !important;
+  height: auto;
+}
+:root {
+  /* ROT */
+  /* BLAU */
+  /* GELB */
+  /* ROSA */
+}
