@@ -7,10 +7,27 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  run:
+    name: Build Projektron BCS UI
     runs-on: ubuntu-latest
-
     steps:
-    - uses: actions/checkout@v2
-    - run: yarn install
-    - run: yarn run build
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      - name: Install dependencies
+        run: yarn install && yarn run build
+
+      - name: Commit changes
+        uses: EndBug/add-and-commit@v4
+        with:
+          author_name: Tatjana Roth
+          author_email: tatjana.roth@denkwerk.com
+          message: "AutoBuild Projektron BCS UI "
+          add: "*"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
