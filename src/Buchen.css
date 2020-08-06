@@ -26,10 +26,11 @@
 [alt="Arbeitspaket"] + span:before,
 [alt="Aufgabe"] + span:before {
     content: "";
-    height: 16px;
-    width: 16px;
+    height: 18px;
+    width: 18px;
     background: none;
-    background-image: url("images/folder-24px.svg");
+    background-image: svg-load("images/folder-24px.svg", fill=rgb(69, 69, 69));
+    background-size: 100%;
     margin-right: 4px;
 }
 

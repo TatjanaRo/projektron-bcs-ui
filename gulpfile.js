@@ -7,6 +7,7 @@ const postcssCustomProperties = require("postcss-custom-properties");
 const serve = require("gulp-serve");
 const svgo = require("gulp-svgo");
 const del = require("del");
+const postcssInlineSVG = require("postcss-inline-svg");
 
 function defaultTask(cb) {
     cb();
@@ -21,11 +22,14 @@ function css(cb) {
     const options = { parser: postcssSCSS };
     const plugins = [
         require("postcss-nested"),
-        require("postcss-flexbugs-fixes"),
         postcssCustomProperties({
             importFrom: "./src/variables.css",
             preserve: false,
         }),
+        postcssInlineSVG({
+            encode: encodeURIComponent,
+        }),
+        require("postcss-flexbugs-fixes"),
         require("postcss-preset-env")({
             autoprefixer: {
                 flexbox: "no-2009",
@@ -43,8 +47,8 @@ function css(cb) {
         .pipe(gulp.dest("./docs/"));
 }
 
-function svg(cb) {
-    return gulp.src("src/images/*").pipe(svgo()).pipe(gulp.dest("docs/images"));
+function images(cb) {
+    return gulp.src("./src/images/**/*.*").pipe(gulp.dest("docs/images"));
 }
 
 function serveTask(cb) {
@@ -57,7 +61,7 @@ function serveTask(cb) {
 }
 
 module.exports = {
-    serve: gulp.series(clean, gulp.parallel(css, svg), serveTask),
-    build: gulp.series(clean, gulp.parallel(css, svg)),
+    serve: gulp.series(clean, gulp.parallel(css, images), serveTask),
+    build: gulp.series(clean, gulp.parallel(css, images)),
     default: defaultTask,
 };

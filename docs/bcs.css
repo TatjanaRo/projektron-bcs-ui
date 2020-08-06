@@ -26,10 +26,11 @@
 [alt="Arbeitspaket"] + span:before,
 [alt="Aufgabe"] + span:before {
   content: "";
-  height: 16px;
-  width: 16px;
+  height: 18px;
+  width: 18px;
   background: none;
-  background-image: url("images/folder-24px.svg");
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2224%22%20fill%3D%22rgb(69%2C%2069%2C%2069)%22%3E%3Cpath%20d%3D%22M0%200h24v24H0z%22%20fill%3D%22none%22%2F%3E%0A%20%20%20%20%3Cpath%20d%3D%22M10%204H4c-1.1%200-1.99.9-1.99%202L2%2018c0%201.1.9%202%202%202h16c1.1%200%202-.9%202-2V8c0-1.1-.9-2-2-2h-8l-2-2z%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+  background-size: 100%;
   margin-right: 4px;
 }
 
@@ -68,7 +69,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #333333;
-  color: var(--brandText);
 }
 
 body,
@@ -244,14 +244,8 @@ div.login input.button {
   height: auto;
 }
 :root {
-  --some-color: red;
-  --brandPrimary: rgb(0, 165, 181);
   /* ROT */
-  --brandSecondary: rgb(251, 52, 72);
   /* BLAU */
-  --brandTertiary: rgb(254, 221, 60);
   /* GELB */
-  --brandQuaternary: rgb(241, 184, 168);
   /* ROSA */
-  --brandText: #333333;
 }
